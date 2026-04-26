@@ -1,0 +1,10 @@
+<section class="flex justify-center">
+    
+    <div class="w-full max-w-2xl p-8 space-y-3 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl shadow-xl grid grid-cols-1 md:grid-cols-3 gap-5">
+        
+        <button class=" border-white border  bg-white/5 max-w-xs w-full"(click)="donateFunction('20')" ><p class="text-center">{{20| currency:'PHP'}}</p></button>
+        <button class=" border-white border  bg-white/5 max-w-xs w-full" (click)="donateFunction('30')"><p class="text-center">{{30| currency:'PHP'}}</p></button>
+        <button class=" border-white border  bg-white/5 max-w-xs w-full" (click)="donateFunction('50')"><p class="text-center">{{50| currency:'PHP'}}</p></button>
+        <button  class="w-full py-3 px-4 mt-2 bg-white text-blue-900 font-bold rounded-lg col-start-2 hover:bg-gray-200 disabled:opacity-50 transition-all shadow-lg active:scale-95" >Donate{{amountChoosen}}</button>
+    </div>
+</section>
