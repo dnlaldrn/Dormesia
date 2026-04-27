@@ -1,10 +1,34 @@
 <section class="flex justify-center">
-    
-    <div class="w-full max-w-2xl p-8 space-y-3 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl shadow-xl grid grid-cols-1 md:grid-cols-3 gap-5">
-        
-        <button class=" border-white border  bg-white/5 max-w-xs w-full"(click)="donateFunction('20')" ><p class="text-center">{{20| currency:'PHP'}}</p></button>
-        <button class=" border-white border  bg-white/5 max-w-xs w-full" (click)="donateFunction('30')"><p class="text-center">{{30| currency:'PHP'}}</p></button>
-        <button class=" border-white border  bg-white/5 max-w-xs w-full" (click)="donateFunction('50')"><p class="text-center">{{50| currency:'PHP'}}</p></button>
-        <button  class="w-full py-3 px-4 mt-2 bg-white text-blue-900 font-bold rounded-lg col-start-2 hover:bg-gray-200 disabled:opacity-50 transition-all shadow-lg active:scale-95" >Donate{{amountChoosen}}</button>
-    </div>
+  <div
+    class="w-full max-w-2xl p-8 space-y-3 bg-white/80 rounded-2xl shadow-xl grid grid-cols-1 md:grid-cols-3 gap-5"
+  >
+    <p class="text-sm font-bold md:text-2xl text-center col-span-3">SUPPORT THE PROJECT</p>
+    <p class="col-span-3">
+      Hi! This site is created and maintained by Daniel, a solo designer and developer. Any support
+      to help cover development and server costs would mean a lot. If Stanza bring convinience to
+      you , feel free to chip in.
+    </p>
+    <p class="col-span-3">
+      No pressure if you cant chip in, just enjoy browsing. Thanks for stopping by!
+    </p>
+    @for (value of ['20', '30', '50']; track value) {
+      <button
+        type="button"
+        class="border-blue-900 border bg-white/5 max-w-xs w-full py-2 transition-colors rounded-2xl"
+        [class.bg-white/20]="amountChosen() === value"
+        [class.ring-1]="amountChosen() === value"
+        (click)="donateFunction(value)"
+      >
+        {{ value | currency: 'PHP' : 'symbol' : '1.0-0' }}
+      </button>
+    }
+
+    <button
+      type="button"
+      class="w-full py-3 px-4 mt-2 bg-white text-blue-900 font-bold rounded-lg col-start-2 hover:bg-gray-200 disabled:opacity-50 transition-all shadow-lg active:scale-95"
+      [disabled]="!amountChosen()"
+    >
+      {{ buttonLabel() }}
+    </button>
+  </div>
 </section>
