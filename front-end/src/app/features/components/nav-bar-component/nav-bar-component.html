@@ -3,19 +3,42 @@
     <ul class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
       <!-- Logo -->
       <li class="flex justify-start md:justify-start items-center">
-        <img class="h-6 md:hidden" src="/menu-icon.svg" />
-
-        <img class="h-30 w-auto" src="./assets/home-logo.png" />
+        <img class="h-30" src="./assets/home-logo.png" />
       </li>
 
       <!-- Menu -->
       <li
-        class="hidden md:flex flex-col md:flex-row justify-evenly gap-4 md:gap-8 backdrop-blur-2xl rounded-2xl px-10"
+        class="absolute top-22 w-2xs md:w-full flex gap-5 bg-black backdrop-blur-2xl rounded-2xl px-10"
       >
-        <a class="text-white" routerLink="/about">About</a>
-        <a class="text-white">Listing</a>
-        <a class="text-white">Contact</a>
-        <a class="text-white" routerLink="/donation">Donation</a>
+        <div class="flex">
+          <img src="/assets/about.svg" /><a
+            class="text-white hidden md:flex gap-2"
+            routerLink="/about"
+          >
+            About</a
+          >
+        </div>
+        <div class="flex">
+          <img src="/assets/listing.svg" class="" /><a
+            class="text-white hidden md:flex gap-2"
+            routerLink="/listing"
+            >Listing</a
+          >
+        </div>
+        <div class="flex">
+          <img src="/assets/feedback.svg" /><a
+            class="text-white hidden md:flex gap-2"
+            routerLink="/feedback"
+            >Feedback</a
+          >
+        </div>
+        <div class="flex">
+          <img src="/assets/donation.svg" /><a
+            class="text-white hidden md:flex gap-2"
+            routerLink="/donation"
+            >Donation</a
+          >
+        </div>
       </li>
     </ul>
   </nav>
