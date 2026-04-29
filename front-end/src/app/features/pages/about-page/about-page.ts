@@ -1,13 +1,12 @@
 import { Component } from '@angular/core';
 import { HomePage } from '../home-page/home-page';
-import { NavBarComponent } from '../../components/nav-bar-component/nav-bar-component';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 import { HeroSectionComponent } from "../../components/hero-section-component/hero-section-component";
 
 @Component({
   selector: 'app-about-page',
-  imports: [ NavBarComponent, CommonModule, HeroSectionComponent],
+  imports: [ CommonModule, HeroSectionComponent],
   templateUrl: './about-page.html',
   styleUrl: './about-page.css',
 })
