@@ -1,9 +1,8 @@
 <section
-  class="relative min-h-screen w-full bg-[url('/assets/bg-home.png')] bg-no-repeat bg-cover bg-center"
->
-  <div class="flex flex-col min-h-screen">
+  class="relative w-full bg-no-repeat bg-cover bg-center h-auto">
+  <div class="flex flex-col">
 
-    <div class="mt-40 md:mt-auto mb-20 px-4 md:px-10 lg:px-20 pb-6 md:pb-10">
+    <div class="pt-30 mb-16 px-4 md:px-10 lg:px-20 pb-6 md:pb-10">
       <app-hero-section-component
         [ngClass]="isRoute('/') ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-10 '"
         title="Your Perfect Dorm Awaits"
@@ -12,7 +11,7 @@
       <a
         routerLink="/sign-up"
         [ngClass]="isRoute('/') ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-10 '"
-        class="bg-white text-black px-4 py-2 rounded-2xl ml-5 hover:bg-black hover:text-white"
+        class="bg-black text-white px-4 py-2 rounded-2xl ml-5 hover:bg-black hover:text-white"
         >Get Started</a
       >
     </div>
