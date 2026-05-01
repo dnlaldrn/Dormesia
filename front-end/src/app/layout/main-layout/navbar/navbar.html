@@ -3,7 +3,7 @@
     <ul class="flex flex-col md:justify-between md:flex-row items-center">
       <!-- Logo -->
       <li class="flex justify-start md:justify-start items-center">
-        <img class="h-25 md:h-30" src="./assets/home-logo.png" />
+        <img routerLink="/" class="h-25 md:h-30" src="./assets/home-logo.png" />
       </li>
 
       <!-- Menu -->
@@ -36,6 +36,14 @@
             class="text-black  flex gap-2"
             routerLink="/donation"
             ><img src="/assets/light-mode-icons/light-donation.svg" /><p class="hidden md:inline-block">Donation</p></a
+          >
+        </div>
+
+        <div class="flex">
+          <a
+            class="text-white  flex gap-2 border px-4 py-1 rounded-sm bg-black"
+            routerLink="/login"
+            >Log in</a
           >
         </div>
       </li>
