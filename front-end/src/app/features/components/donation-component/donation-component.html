@@ -1,6 +1,6 @@
 <section class="flex justify-center">
   <div
-    class="w-full max-w-2xl p-8 space-y-3 bg-white/10 backdrop-blur-md rounded-2xl shadow-xl grid grid-cols-1 md:grid-cols-3 gap-5"
+    class="w-full max-w-2xl p-8 space-y-3 bg-white/10 backdrop-blur-md rounded-2xl shadow-xl grid md:grid-cols-3 gap-5"
   >
     <p class="text-sm font-bold md:text-2xl text-center col-span-3">SUPPORT THE PROJECT</p>
     <p class="col-span-3">
@@ -14,7 +14,7 @@
     @for (value of ['20', '30', '50']; track value) {
       <button
         type="button"
-        class="border-blue-900 border bg-white/5 max-w-xs w-full py-2 transition-colors rounded-2xl"
+        class="border-blue-900 border bg-white/5 w-full py-2 transition-colors rounded-2xl"
         [class.bg-white/20]="amountChosen() === value"
         [class.ring-1]="amountChosen() === value"
         (click)="donateFunction(value)"
