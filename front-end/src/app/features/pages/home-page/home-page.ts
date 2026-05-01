@@ -12,7 +12,6 @@ import { CommonModule } from '@angular/common';
 export class HomePage {
 constructor(public router: Router) {}
 
-  // Helper to check if a route is active
   isRoute(route: string): boolean {
     return this.router.url === route;
   }
