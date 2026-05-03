@@ -13,27 +13,27 @@ interface Category{
 })
 export class CategoryCardComponent {
   categoryitems: Category[] = [{
-     img : 'string',
+     img : '/assets/img/bedspace.png',
      description: 'Bedspace'
   },
   {
-     img : 'string',
+     img : '/assets/img/room.png',
      description: 'Room for Rent'
   },
   {
-     img : 'string',
+     img : '/assets/img/studio.png',
      description: 'Studio Unit'
   },
   {
-     img : 'string',
+     img : '/assets/img/apartment.png',
      description: 'Apartment'
   },
   {
-     img : 'string',
+     img : '/assets/img/house.png',
      description: 'House'
   },
   {
-     img : 'string',
+     img : '/assets/img/dormitory.png',
      description: 'Dormitory'
   },
 ]
