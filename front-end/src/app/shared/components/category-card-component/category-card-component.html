@@ -3,8 +3,8 @@
   @for (item of categoryitems; track $index) {
     <div class="w-full flex flex-col items-center">
       <!-- aspect-square ensures the box stays a perfect square regardless of width -->
-      <div class="bg-blue-300 w-full aspect-square rounded-2xl transition-transform hover:scale-105 cursor-pointer">
-      </div>
+      <img class="w-full aspect-square rounded-2xl transition-transform hover:scale-105 cursor-pointer" src="{{item.img}}">
+    
       <p class="mt-2 text-center text-sm md:text-base font-medium text-gray-700">
         {{item.description}}
       </p>
