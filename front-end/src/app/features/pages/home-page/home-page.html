@@ -5,16 +5,15 @@
     <!-- Left Content -->
     <div class="flex flex-col items-start text-left order-2 md:order-1">
       <app-hero-section-component
-        [ngClass]="isRoute('/') ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-10 '"
+
         class="transition-all duration-700 ease-out"
         title="Your Perfect Dorm Awaits"
         description="Experience modern living with Stanza. Find the best dorms and apartments tailored to your student lifestyle in San Juan."
       ></app-hero-section-component>
 
-      <div class="mt-6">
+      <div class="mt-6 md:px-5">
         <a
           routerLink="/sign-up"
-          [ngClass]="isRoute('/') ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-10 '"
           class="inline-block bg-black text-white px-8 py-3 rounded-full transition-all duration-700 delay-150 hover:bg-gray-800"
         >
           Get Started
@@ -24,7 +23,6 @@
 
     <!-- Right Image (Semi-Circle) -->
     <div
-      [ngClass]="isRoute('/') ? 'opacity-100 scale-100' : 'opacity-0 scale-95'"
       class="relative order-1 md:order-2 flex justify-center md:justify-end transition-all duration-1000"
     >
       <div
@@ -37,9 +35,15 @@
         />
       </div>
     </div>
-    <div class="order-3 md:col-span-2">
-      <p class="font-bold text-lg">Browse by Categories </p>
+    <div class="order-3 md:col-span-2 px-4 md:px-5 lg:px-5">
+      <p class="font-bold text-lg mb-3">Browse by Categories </p>
     <app-category-card-component></app-category-card-component>
+
+    </div>
+
+     <div class="order-3 md:col-span-2 px-4 md:px-5 lg:px-5">
+      <p class="font-bold text-lg mb-3">Featured</p>
+    <app-card-component></app-card-component>
 
     </div>
      
