@@ -1,6 +1,7 @@
 import { Component, signal } from '@angular/core';
 import { MainLayout } from './layout/main-layout/main-layout';
 
+
 @Component({
   selector: 'app-root',
   standalone: true,
