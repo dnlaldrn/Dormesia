@@ -4,6 +4,7 @@ import {CategoryCardComponent} from '../../../shared/components/category-card-co
 import {CardComponent} from '../../../shared/components/card-component/card-component'
 import { RouterLink, Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { PropertyService } from '../../../core/services/property-service/property-service';
 
 
 @Component({
@@ -13,4 +14,11 @@ import { CommonModule } from '@angular/common';
   styleUrl: './home-page.css',
 })
 export class HomePage {
+  private readonly propertyService = inject(PropertyService);
+  
+    protected readonly properties = this.propertyService.allProperties;
+  
+    ngOnInit(): void {
+      this.propertyService.getAllProperty();
+    }
 }
