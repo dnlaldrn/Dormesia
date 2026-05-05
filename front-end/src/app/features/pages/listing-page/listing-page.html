@@ -1,1 +1,7 @@
-<p>listing-page works!</p>
+<section
+  class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mx-auto px-4 md:px-10 lg:px-20"
+>
+  @for (item of properties; track $index) {
+    <app-card-component [properties]="item"></app-card-component>
+  }
+</section>
