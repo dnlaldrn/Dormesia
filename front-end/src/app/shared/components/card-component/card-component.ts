@@ -1,20 +1,16 @@
-import { Component, inject ,OnInit} from '@angular/core';
-import {PropertyService} from '../../../core/services/property-service/property-service'
-import { NgModule } from '@angular/core';
+import { Component, input ,OnInit} from '@angular/core';
+import { CurrencyPipe } from '@angular/common';
+import {PropertyService,Property} from '../../../core/services/property-service/property-service'
+
+
 
 @Component({
   selector: 'app-card-component',
-  imports: [],
+  imports: [CurrencyPipe],
   templateUrl: './card-component.html',
   styleUrl: './card-component.css',
 })
-export class CardComponent implements OnInit {
+export class CardComponent {
   // Inject the service
-  private propertyService = inject(PropertyService);
-
-  protected readonly properties = this.propertyService.allProperties; 
-
-  ngOnInit() :void {
-    this.propertyService.getAllProperty();
-  }
+ properties = input.required<Property>();
 }

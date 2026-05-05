@@ -1,18 +1,23 @@
-<section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-  @for (item of properties; track $index) {
-    <div class="card p-3 border">
-      <!-- Use property binding [src] to show the actual image -->
-      <img [src]="item.img" alt="Property Image" class="w-full h-auto" />
-      <div class="flex justify-between items-center px-2">
-        <div>
-          <p>{{ item.propertyName }}</p>
-          <div class="flex">
-            <p class="">{{ item.category }} |</p>
-            <p class="">{{ item.address }}</p>
-          </div>
-        </div>
-        <button class="bg-black text-white px-3 py-1 rounded-2xl">Inquire</button>
-      </div>
+<div
+  class="card p-3 shadow-lg rounded-2xl transition-all duration-300 ease-in-out hover:scale-98 hover:shadow-xl"
+>
+  <!-- Use property binding [src] to show the actual image -->
+  <img [src]="properties().img" alt="Property Image" class="w-full h-auto" />
+  <div class="flex justify-between items-end px-2">
+    <div>
+      <p>{{ properties().propertyName }} - {{ properties().category }}</p>
+
+      <p class="">{{ properties().address }}</p>
+
+      @for (star of [].constructor(properties().rating); track $index) {
+        <span class="text-yellow-500 text-2xl">★</span>
+      }
+
+      @for (star of [].constructor(5 - properties().rating); track $index) {
+        <span class="text-gray-300 text-2xl">★</span>
+      }
+      <p>{{ properties().price | currency: 'PHP' }}</p>
     </div>
-  }
-</section>
+    <button class="bg-black text-white px-6 py-1 rounded-2xl">Inquire</button>
+  </div>
+</div>
