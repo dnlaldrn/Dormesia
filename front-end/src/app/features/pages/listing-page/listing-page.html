@@ -1,7 +1,12 @@
-<section
-  class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mx-auto px-4 md:px-10 lg:px-20"
+
+<section class="relative w-full overflow-hidden bg-white  mx-auto px-4 md:px-10 lg:px-20 ">
+<app-input-search-component></app-input-search-component>
+<div
+  class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+  
 >
   @for (item of properties; track $index) {
     <app-card-component [properties]="item"></app-card-component>
   }
+</div>
 </section>
