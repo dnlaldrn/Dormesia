@@ -1,10 +1,11 @@
 import { Component, inject, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { PropertyService } from '../../../core/services/property-service/property-service';
 import { CardComponent } from '../../../shared/components/card-component/card-component';
+import {InputSearchComponent} from '../../../shared/components/input-search-component/input-search-component'
 
 @Component({
   selector: 'app-listing-page',
-  imports: [CardComponent],
+  imports: [CardComponent,InputSearchComponent],
   templateUrl: './listing-page.html',
   styleUrl: './listing-page.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
