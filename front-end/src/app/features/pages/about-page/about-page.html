@@ -1,11 +1,11 @@
-<section class="relative w-full overflow-hidden bg-white py-12 md:py-20">
+<section class=" relative w-full overflow-hidden bg-white py-12 md:py-20">
   <div
     class="container mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-8 px-4 md:px-10 lg:px-20"
   >
-    <div class="mb-auto"><img src="assets/img/abt-img.png" /></div>
-    <div class="text-justify leading-loose mt-20 md:mt-0">
+    <div class="component mb-auto"><img src="assets/img/abt-img.png"[style.animation-delay.ms]="100" /></div>
+    <div class="component text-justify leading-loose mt-20 md:mt-0" [style.animation-delay.ms]="200">
       <p class="text-4xl md:text-5xl text-black font-bold">About Us</p>
-      <p class="text-grey">
+      <p class="text-grey mt-3">
         Stanza is a dorm listing web application developed by Daniel Manjares, a Computer Science
         student at Batangas State University. The platform was created with the goal of helping
         students find temporary shelter, dormitories, apartments, and bed spaces in a faster,
@@ -31,7 +31,7 @@
     </div>
 
     <div>
-      <div class="space-y-16">
+      <div class="component space-y-16" [style.animation-delay.ms]="300">
         <!-- Mission -->
         <div>
           <h2 class="text-3xl md:text-4xl font-extrabold mb-6">
@@ -56,7 +56,7 @@
       </div>
     </div>
     <div>
-      <div>
+      <div class="component" [style.animation-delay.ms]="400">
         <h2 class="text-3xl md:text-4xl font-extrabold mb-10">
           Our <span class="text-gray-400">Core Values</span>
         </h2>

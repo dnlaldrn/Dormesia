@@ -2,3 +2,17 @@ img {
   /* Reflect below with a 2px gap and a fading gradient mask */
   -webkit-box-reflect: below 1px linear-gradient(transparent, rgba(0, 0, 0, 0.4));
 }
+.component {
+  animation: fadeUp 400ms ease-in-out both;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
