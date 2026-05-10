@@ -6,7 +6,7 @@
   
 >
   @for (item of properties; track $index) {
-    <app-card-component [properties]="item"></app-card-component>
+    <app-card-component class="component" [properties]="item" [style.animation-delay.ms]="100*$index"></app-card-component>
   }
 </div>
 </section>
