@@ -42,10 +42,10 @@
     <div class="order-3 md:col-span-2 lg:col-span-3 px-4 md:px-5 lg:px-5">
       <p class="font-bold text-lg mb-3">Featured</p>
        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      @for (item of properties; track $index) {
+      @for (item of properties(); track item.propertyId) {
         @if ($index > 2) {
          
-            <app-card-component [properties]="item" class="component" [style.animation-delay.ms]="200*$index"></app-card-component>
+            <app-card-component [properties]="item" class="component" [style.animation-delay.ms]="200*$index" [routerLink]="['/property' , item.propertyId]"></app-card-component>
          
         }
         
