@@ -1,0 +1,26 @@
+<section class="  w-full overflow-hidden bg-white py-12 md:py-20">
+  <div
+    class="container  gap-8 px-4 md:px-10 lg:px-20"
+  >
+  <nav>
+    <a>Home</a>
+    <a>Listing</a>
+    <a>Home</a>
+
+
+  </nav>
+  
+      <main class="max-w-4xl mx-auto p-6">
+        <h1 class="text-3xl font-bold">{{ property().propertyName }}</h1>
+        <p class="text-gray-500">{{ property().category }} • {{ property().address }}</p>
+        <div class="mt-6">
+          <img [src]="property().img" [alt]="property().propertyName" class="rounded-xl w-full object-cover h-96">
+        </div>
+        <p class="mt-4 text-2xl font-semibold">₱{{ property().price }} / month</p>
+      </main>
+   
+    
+  
+  
+  </div>
+</section>
