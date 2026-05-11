@@ -5,8 +5,8 @@
   class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
   
 >
-  @for (item of properties; track $index) {
-    <app-card-component class="component" [properties]="item" [style.animation-delay.ms]="100*$index"></app-card-component>
+  @for (item of properties(); track item.propertyId) {
+    <app-card-component class="component" [properties]="item" [style.animation-delay.ms]="100*$index " [routerLink]="['/property', item.propertyId]" ></app-card-component>
   }
 </div>
 </section>
