@@ -8,6 +8,6 @@ import { Property } from '../../../core/services/property-service/property-servi
   styleUrl: './property-details-component.css',
 })
 export class PropertyDetailsComponent {
+  readonly property = input.required<Property>()
 
-   
 }

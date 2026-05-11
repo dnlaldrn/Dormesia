@@ -1,10 +1,11 @@
 import { Component, inject,signal,computed, input } from '@angular/core';
 import {PropertyDetailsComponent} from  '../../components/property-details-component/property-details-component'
 import {PropertyService} from '../../../core/services/property-service/property-service'
+import { RouterOutlet } from "../../../../../node_modules/@angular/router/types/_router_module-chunk";
 
 @Component({
   selector: 'app-property-details-page',
-  imports: [PropertyDetailsComponent],
+  imports: [PropertyDetailsComponent, RouterOutlet],
   templateUrl: './property-details-page.html',
   styleUrl: './property-details-page.css',
 })
