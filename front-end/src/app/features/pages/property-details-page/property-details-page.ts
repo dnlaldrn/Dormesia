@@ -1,0 +1,25 @@
+import { Component, inject,signal,computed, input } from '@angular/core';
+import {PropertyDetailsComponent} from  '../../components/property-details-component/property-details-component'
+import {PropertyService} from '../../../core/services/property-service/property-service'
+
+@Component({
+  selector: 'app-property-details-page',
+  imports: [PropertyDetailsComponent],
+  templateUrl: './property-details-page.html',
+  styleUrl: './property-details-page.css',
+})
+export class PropertyDetailsPage {
+   readonly propertyId = input.required<string>();
+   private readonly propertyService = inject(PropertyService);
+
+  // This input captures the 'propertyId' from the URL route automatically
+  // Note: URL params are strings, so we convert it to a number
+
+
+  // Use computed to reactively find the property whenever the ID changes
+  readonly property = computed(() => {
+    const id = Number(this.propertyId());
+    return this.propertyService.getPropertyById(id);
+  });
+  
+}
