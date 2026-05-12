@@ -8,6 +8,10 @@ export interface Property {
   readonly rating: number;
   readonly img: string;
   readonly price: number;
+  readonly electricity: boolean;
+  readonly water: boolean;
+  readonly internet: boolean;
+  readonly airconditioned: boolean;
 }
 
 @Injectable({
@@ -22,7 +26,11 @@ export class PropertyService {
       rating: 5,
       img: './assets/img/home-img.png',
       address: 'Kumintang, Batangas City',
-      price: 2000,
+      price: 3000,
+      electricity:true,
+      water:true,
+      internet:true,
+      airconditioned: false,
     },
     {
         propertyId:2,
@@ -31,7 +39,11 @@ export class PropertyService {
       rating: 3,
       img: './assets/img/home-img.png',
       address: 'Kumintang, Batangas City',
-      price: 2000,
+      price: 2500,
+      electricity:true,
+      water:true,
+      internet:true,
+      airconditioned: false,
     },
     {
         propertyId:3,
@@ -41,6 +53,10 @@ export class PropertyService {
       img: './assets/img/home-img.png',
       address: 'Kumintang, Batangas City',
       price: 2000,
+      electricity:true,
+      water:false,
+      internet:true,
+      airconditioned: false,
     },
     {
         propertyId:4,
@@ -50,6 +66,10 @@ export class PropertyService {
       img: './assets/img/home-img.png',
       address: 'Kumintang, Batangas City',
       price: 2000,
+      electricity:true,
+      water:true,
+      internet:false,
+      airconditioned: false,
     },
     {
         propertyId:5,
@@ -58,7 +78,11 @@ export class PropertyService {
       rating: 2,
       img: './assets/img/home-img.png',
       address: 'Kumintang, Batangas City',
-      price: 2000,
+      price: 2100,
+      electricity:true,
+      water:true,
+      internet:true,
+      airconditioned: false,
     },
     {
         propertyId:6,
@@ -68,6 +92,10 @@ export class PropertyService {
       img: './assets/img/home-img.png',
       address: 'Kumintang, Batangas City',
       price: 2000,
+      electricity:false,
+      water:false,
+      internet:false,
+      airconditioned: false,
     },
   ]);
   
