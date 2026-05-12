@@ -1,5 +1,5 @@
-import { Component , inject, input, computed} from '@angular/core';
-import { Property } from '../../../core/services/property-service/property-service';
+import { Component, inject, input, computed } from '@angular/core';
+import { PropertyService } from '../../../core/services/property-service/property-service';
 
 @Component({
   selector: 'app-property-details-component',
@@ -8,6 +8,16 @@ import { Property } from '../../../core/services/property-service/property-servi
   styleUrl: './property-details-component.css',
 })
 export class PropertyDetailsComponent {
-  readonly property = input.required<Property>()
+ 
+  private readonly propertyService = inject(PropertyService);
 
+  // This input captures the 'propertyId' from the URL route automatically
+  // Note: URL params are strings, so we convert it to a number
+   readonly propertyId = input.required<string>();
+
+  // Use computed to reactively find the property whenever the ID changes
+  readonly property = computed(() => {
+    const id = Number(this.propertyId());
+    return this.propertyService.getPropertyById(id);
+  });
 }
