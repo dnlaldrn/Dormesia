@@ -5,7 +5,7 @@ import { PropertyService } from '../../../core/services/property-service/propert
   selector: 'app-property-details-component',
   imports: [],
   templateUrl: './owner-details-component.html',
-  styleUrl: './property-details-component.css',
+  styleUrl: './owner-details-component.css',
 })
 export class PropertyDetailsComponent {
 }
