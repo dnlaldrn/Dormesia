@@ -17,5 +17,5 @@ export const routes: Routes = [
   { path: 'donation', component: DonationPage },
   { path: 'listing', component: ListingPage },
   { path: 'feedback', component: FeedbackPage },
-  { path: 'property/:propertyId', component: PropertyDetailsComponent },
+  { path: 'property/:propertyId', component: PropertyDetailsPage },
 ];
