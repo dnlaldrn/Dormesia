@@ -7,7 +7,7 @@ import { DonationPage } from './features/pages/donation-page/donation-page';
 import { ListingPage } from './features/pages/listing-page/listing-page';
 import { FeedbackPage } from './features/pages/feedback-page/feedback-page';
 import { PropertyDetailsPage } from './features/pages/property-details-page/property-details-page';
-import { PropertyDetailsComponent } from './features/components/property-details-component/property-details-component';
+import { PropertyDetailsComponent } from './features/components/property-details-component/owner-details-component';
 
 export const routes: Routes = [
   { path: '', component: HomePage },
