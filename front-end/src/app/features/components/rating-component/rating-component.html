@@ -1,0 +1,115 @@
+<div class="max-w-full  bg-white shadow-sm rounded-sm p-5">
+    <div class="flex justify-between items-center mb-6">
+            <h2 class="text-xl font-semibold">Product Ratings (40)</h2>
+            <div class="flex gap-3">
+                <button class="px-4 py-2 border border-slate-300 rounded text-sm text-slate-600 hover:bg-gray-50">Filter by All Stars</button>
+                <button class="px-4 py-2 border border-slate-300 rounded text-sm text-slate-600 hover:bg-gray-50">Sort by relevance</button>
+            </div>
+        </div>
+
+        <!-- Rating Summary Box -->
+        <div class="bg-slate-50 border border-slate-100 p-8 rounded-sm mb-8 flex flex-col md:flex-row items-center gap-10">
+            <div class="text-center">
+                <div class="text-3xl font-bold text-black-500 mb-1">
+                    <span class="text-4xl">4.6</span> <span class="text-2xl font-normal text-slate-800"> out of 5</span>
+                </div>
+                <div class="flex justify-center text-xl text-orange-400">
+                    <span>★</span><span>★</span><span>★</span><span>★</span><span class="text-gray-300">★</span>
+                </div>
+            </div>
+
+            <!-- Filters -->
+            <div class="flex flex-wrap gap-2 max-w-xl">
+                <button class="px-6 py-2 bg-black-500 text-white rounded border border-black-500 text-sm">All</button>
+                <button class="px-4 py-2 bg-white border border-slate-300 rounded text-sm hover:border-black-500">5 Stars (9)</button>
+                <button class="px-4 py-2 bg-white border border-slate-300 rounded text-sm hover:border-black-500">4 Stars (1)</button>
+                <button class="px-4 py-2 bg-white border border-slate-300 rounded text-sm hover:border-black-500">2 Stars (0)</button>
+                <button class="px-4 py-2 bg-white border border-slate-300 rounded text-sm hover:border-black-500">1 Star (0)</button>
+                <button class="px-4 py-2 bg-white border border-slate-300 rounded text-sm hover:border-black-500">With comments (6)</button>
+                <button class="px-4 py-2 bg-white border border-slate-300 rounded text-sm hover:border-black-500">With media (4)</button>
+            </div>
+        </div>
+
+        <!-- Review List -->
+        <div class="space-y-8">
+            <!-- Review Item 1 -->
+            <div class="border-b border-slate-100 pb-8">
+                <div class="flex justify-between items-start mb-2">
+                    <div class="flex gap-3">
+                        <!-- Placeholder for User Avatar -->
+                        <div class="w-12 h-12 rounded-full overflow-hidden bg-gray-200">
+                            <img src="image_2b50f9.png" alt="User Avatar" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-800">yellovemeso</h4>
+                            <div class="flex text-orange-400 text-xs">
+                                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="text-slate-400 hover:text-slate-600">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z" />
+                        </svg>
+                    </button>
+                </div>
+                <p class="text-slate-500 text-sm leading-relaxed mb-4">
+                    This farmer has been very helpful to us busy parents. Their price is also cheaper than in malls plus the seller is very responsive and kind. I just hope next time it will be delivered sooner. Thank you!
+                </p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-4 py-1 border border-slate-200 rounded-full text-xs text-slate-500">Excellent quality</span>
+                    <span class="px-4 py-1 border border-slate-200 rounded-full text-xs text-slate-500">Very accommodating farmer</span>
+                    <span class="px-4 py-1 border border-slate-200 rounded-full text-xs text-slate-500">Well-packaged</span>
+                    <span class="px-4 py-1 border border-slate-200 rounded-full text-xs text-slate-500">Well-packaged</span>
+                </div>
+            </div>
+
+            <!-- Review Item 2 (Duplicate for layout) -->
+            <div class="border-b border-slate-100 pb-8">
+                <div class="flex justify-between items-start mb-2">
+                    <div class="flex gap-3">
+                        <div class="w-12 h-12 rounded-full overflow-hidden bg-gray-200">
+                            <img src="image_2b50f9.png" alt="User Avatar" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-800">yellovemeso</h4>
+                            <div class="flex text-orange-400 text-xs">
+                                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="text-slate-400">•••</button>
+                </div>
+                <p class="text-slate-500 text-sm leading-relaxed mb-4">
+                    This farmer has been very helpful to us busy parents. Their price is also cheaper than in malls plus the seller is very responsive and kind...
+                </p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-4 py-1 border border-slate-200 rounded-full text-xs text-slate-500">Excellent quality</span>
+                    <span class="px-4 py-1 border border-slate-200 rounded-full text-xs text-slate-500">Well-packaged</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pagination -->
+        <div class="mt-8 flex flex-col items-center gap-4">
+            <div class="text-slate-500 text-sm flex items-center gap-2">
+                <span>Page 1 out 10</span>
+                <span class="flex gap-2 font-mono ml-4">
+                    <span class="cursor-pointer">&lt;&lt;</span>
+                    <span class="cursor-pointer">&lt;</span>
+                    <span class="text-slate-800 font-bold">1</span>
+                    <span class="cursor-pointer">2</span>
+                    <span class="cursor-pointer">3</span>
+                    <span class="cursor-pointer">4</span>
+                    <span class="cursor-pointer">5</span>
+                    <span class="cursor-pointer">6</span>
+                    <span class="cursor-pointer">&gt;</span>
+                    <span class="cursor-pointer">&gt;&gt;</span>
+                </span>
+            </div>
+            
+            <button class="px-8 py-2 border border-black-500 text-black-600 rounded text-sm font-medium hover:bg-black-50 transition-colors">
+                Read All
+            </button>
+        </div>
+</div>
