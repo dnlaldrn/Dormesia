@@ -3,10 +3,11 @@ import { RouterLink } from '@angular/router';
 import { PropertyDetailsComponent } from '../../components/property-details-component/owner-details-component';
 import { PropertyService } from '../../../core/services/property-service/property-service';
 import { CurrencyPipe } from '@angular/common';
+import {RatingComponent} from '../../components/rating-component/rating-component'
 
 @Component({
   selector: 'app-property-details-page',
-  imports: [ RouterLink, PropertyDetailsComponent, CurrencyPipe],
+  imports: [ RouterLink, PropertyDetailsComponent, CurrencyPipe,RatingComponent],
   templateUrl: './property-details-page.html',
   styleUrl: './property-details-page.css',
 })
