@@ -23,6 +23,9 @@ export class PropertyDetailsPage {
       const id = Number(this.propertyId());
       return this.propertyService.getPropertyById(id);
     });
-   
+
+     readonly properties = this.propertyService.allProperties;
+
+
   
 }
