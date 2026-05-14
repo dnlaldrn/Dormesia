@@ -102,10 +102,13 @@ export class PropertyService {
   readonly allProperties = this.propertiesState.asReadonly();
 
   getAllProperty() {
-    return this.allProperties;
+    return this.propertiesState;
     
   }
   getPropertyById(id: number): Property | undefined {
     return this.propertiesState().find(p => p.propertyId === id);
+  }
+  getRelatedProperty(category: string) {
+    return this.propertiesState().filter(p => p.category === category);
   }
 }
