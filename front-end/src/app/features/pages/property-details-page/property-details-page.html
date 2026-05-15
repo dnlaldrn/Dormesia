@@ -1,12 +1,14 @@
-<section class="w-full overflow-hidden bg-white">
-  <div class="container grid grid-cols-1 lg:grid-cols-4 gap-2 px-4 md:px-10 lg:px-20 leading-loose ">
+<section class="w-full overflow-hidden bg-white flex justify-start items-center">
+  <div class="container grid grid-cols-1 lg:grid-cols-4 gap-2 px-4 md:px-10 lg:px-20 leading-loose">
     <nav aria-label="Breadcrumb" class="flex gap-2 text-sm text-blue-600 col-span-4">
       <a routerLink="/">Home</a> / <a routerLink="/listing">Listing</a> /
       <span class="text-gray-400">{{ property()?.propertyName }}</span>
     </nav>
 
     @if (property(); as data) {
-      <main class="max-w-full  rounded-lg shadow-sm border border-gray-200  row-start-2 col-span-3 p-2 lg:flex gap-3 ">
+      <main
+        class="max-w-full rounded-lg shadow-sm border border-gray-200 row-start-2 col-span-3 p-2 lg:flex gap-3"
+      >
         <div>
           <!-- Using NgOptimizedImage would be even better here! -->
           <img
@@ -35,7 +37,7 @@
           <p>Internet included: {{ data.internet ? 'Yes' : 'No' }}</p>
           <p>Airconditioned:{{ data.airconditioned ? 'Yes' : 'No' }}</p>
           <p class="text-2xl font-semibold mt-10 gap">{{ data.price | currency: 'PHP' }}</p>
-          <button class="border-2 border-black px-3 rounded-2xl mt-3 ">Add to Favorites</button>
+          <button class="border-2 border-black px-3 rounded-2xl mt-3">Add to Favorites</button>
         </div>
       </main>
     } @else {
@@ -43,9 +45,22 @@
         <p>Property not found or loading...</p>
       </div>
     }
-    <div class="row-start-3 lg:row-start-2 lg:col-start-4 ">google maps dito hehehe</div>
-    <app-property-details-component class="row-start-4 col-span-3 w-full"></app-property-details-component>
-     <app-rating-component class="row-start-5 col-span-3 w-full"></app-rating-component>
+    <div class="row-start-3 lg:row-start-2 lg:col-start-4">google maps dito hehehe</div>
+    <app-property-details-component
+      class="row-start-4 col-span-3 w-full"
+    ></app-property-details-component>
+    <app-rating-component class="row-start-5 col-span-3 w-full"></app-rating-component>
+    <div
+      class="rounded-lg shadow-sm border border-gray-200 p-5 row-start-6 w-full h-full col-span-4 grid grid-cols-1 lg:grid-cols-4"
+    >
+      <p class="col-span-1 text-md lg:text-lg font-bold lg:col-span-4">Related Categories</p>
+      @for (item of relatedProperties(); track $index) {
+        @if ($index < 4) {
+          <app-card-component [properties]="item"></app-card-component>
+        }
+      } @empty {
+        <p class="text-center col-span-4">No related categories found!</p>
+      }
+    </div>
   </div>
-  
 </section>
