@@ -1,7 +1,7 @@
-import { Injectable ,signal,computed} from '@angular/core';
+import { Injectable, signal, computed } from '@angular/core';
 
 export interface Property {
-  readonly propertyId : number;
+  readonly propertyId: number;
   readonly propertyName: string;
   readonly category: string;
   readonly address: string;
@@ -20,95 +20,120 @@ export interface Property {
 export class PropertyService {
   private readonly propertiesState = signal<Property[]>([
     {
-      propertyId:1,
+      propertyId: 1,
       propertyName: 'House 1',
       category: 'House',
       rating: 5,
       img: './assets/img/home-img.png',
       address: 'Kumintang, Batangas City',
       price: 3000,
-      electricity:true,
-      water:true,
-      internet:true,
+      electricity: true,
+      water: true,
+      internet: true,
       airconditioned: false,
     },
     {
-        propertyId:2,
+      propertyId: 2,
       propertyName: 'House 1',
       category: 'Bed Space',
       rating: 3,
       img: './assets/img/home-img.png',
       address: 'Kumintang, Batangas City',
       price: 2500,
-      electricity:true,
-      water:true,
-      internet:true,
+      electricity: true,
+      water: true,
+      internet: true,
       airconditioned: false,
     },
     {
-        propertyId:3,
+      propertyId: 3,
       propertyName: 'House 1',
       category: 'Apartment',
       rating: 2,
       img: './assets/img/home-img.png',
       address: 'Kumintang, Batangas City',
       price: 2000,
-      electricity:true,
-      water:false,
-      internet:true,
+      electricity: true,
+      water: false,
+      internet: true,
       airconditioned: false,
     },
     {
-        propertyId:4,
+      propertyId: 4,
       propertyName: 'House 1',
       category: 'Apartment',
       rating: 2,
       img: './assets/img/home-img.png',
       address: 'Kumintang, Batangas City',
       price: 2000,
-      electricity:true,
-      water:true,
-      internet:false,
+      electricity: true,
+      water: true,
+      internet: false,
       airconditioned: false,
     },
     {
-        propertyId:5,
+      propertyId: 5,
       propertyName: 'House 1',
       category: 'Apartment',
       rating: 2,
       img: './assets/img/home-img.png',
       address: 'Kumintang, Batangas City',
       price: 2100,
-      electricity:true,
-      water:true,
-      internet:true,
+      electricity: true,
+      water: true,
+      internet: true,
       airconditioned: false,
     },
     {
-        propertyId:6,
+      propertyId: 6,
       propertyName: 'House 1',
       category: 'Apartment',
       rating: 2,
       img: './assets/img/home-img.png',
       address: 'Kumintang, Batangas City',
       price: 2000,
-      electricity:false,
-      water:false,
-      internet:false,
+      electricity: false,
+      water: false,
+      internet: false,
+      airconditioned: false,
+    },
+    {
+      propertyId: 7,
+      propertyName: 'House 1',
+      category: 'Apartment',
+      rating: 2,
+      img: './assets/img/home-img.png',
+      address: 'Kumintang, Batangas City',
+      price: 2000,
+      electricity: false,
+      water: false,
+      internet: false,
+      airconditioned: false,
+    },
+    {
+      propertyId: 8,
+      propertyName: 'House 1',
+      category: 'Apartment',
+      rating: 2,
+      img: './assets/img/home-img.png',
+      address: 'Kumintang, Batangas City',
+      price: 2000,
+      electricity: false,
+      water: false,
+      internet: false,
       airconditioned: false,
     },
   ]);
-  
+
   readonly allProperties = this.propertiesState.asReadonly();
 
   getAllProperty() {
-    return this.propertiesState;
-    
+    return this.allProperties;
   }
   getPropertyById(id: number): Property | undefined {
-    return this.propertiesState().find(p => p.propertyId === id);
+    return this.propertiesState().find((p) => p.propertyId === id);
   }
-  getRelatedProperty(category: string) {
-    return this.propertiesState().filter(p => p.category === category);
+  getPropertiesByCategory(category: string): Property[] {
+    return this.propertiesState().filter((p) => p.category === category);
   }
 }
