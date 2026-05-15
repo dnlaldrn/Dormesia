@@ -3,7 +3,10 @@
     class="container mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-8 px-4 md:px-10 lg:px-20"
   >
     <!-- Left Content -->
-    <div class=" component flex flex-col items-start text-left order-2 md:order-1" [style.animation-delay.ms]="100">
+    <div
+      class="component flex flex-col items-start text-left order-2 md:order-1"
+      [style.animation-delay.ms]="100"
+    >
       <app-hero-section-component
         class="transition-all duration-700 ease-out"
         title="Your Perfect Dorm Awaits"
@@ -22,7 +25,8 @@
 
     <!-- Right Image (Semi-Circle) -->
     <div
-      class="component  relative order-1 md:order-2 flex justify-center md:justify-end transition-all duration-1000" [style.animation-delay.ms]="200"
+      class="component relative order-1 md:order-2 flex justify-center md:justify-end transition-all duration-1000"
+      [style.animation-delay.ms]="200"
     >
       <div
         class="w-full max-w-100 max-h-100 lg:max-w-500 aspect-auto overflow-hidden rounded-t-full rounded-b-full md:rounded-r-full"
@@ -41,17 +45,18 @@
 
     <div class="order-3 md:col-span-2 lg:col-span-3 px-4 md:px-5 lg:px-5">
       <p class="font-bold text-lg mb-3">Featured</p>
-       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      @for (item of properties(); track item.propertyId) {
-        @if ($index > 2) {
-         
-            <app-card-component [properties]="item" class="component" [style.animation-delay.ms]="200*$index" [routerLink]="['/property' , item.propertyId]"></app-card-component>
-         
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        @for (item of properties(); track $index) {
+          @if ($index > 4) {
+            <app-card-component
+              [properties]="item"
+              class="component"
+              [style.animation-delay.ms]="200 * $index"
+              [routerLink]="['/property', item.propertyId]"
+            ></app-card-component>
+          }
         }
-        
-      }
-       </div>
-      
+      </div>
     </div>
   </div>
 </section>
